@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Transmission",
+      "cost": "$100",
+      "description": "Defective pressure switch on 4th gear.",
+      "icon": "fas fa-cogs"
+    },
+    {
+      "title": "Battery",
+      "cost": "$200",
+      "description": "Battery needs replacement. Low charge detected.",
+      "icon": "fas fa-battery-three-quarters"
+    },
+    {
+      "title": "Tires",
+      "cost": "$150",
+      "description": "Front left tire worn out. Replacement recommended.",
+      "icon": "fas fa-tire"
+    }
+  ]
+  
