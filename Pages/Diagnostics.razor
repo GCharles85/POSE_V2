@@ -2,7 +2,7 @@
 
 @using System.Net.Http
 @using System.Net.Http.Json
-@using Diagnoses.Models
+@using System.Diagnostics
 @inject HttpClient Http
 
 <h1>Diagnoses</h1>
@@ -29,23 +29,54 @@ else
     }
 }
 
-<button @onclick="FetchNewData">Update Diagnoses</button>
+<button @onclick="FetchPredictedData">Get AI Diagnosis</button>
 
 @code {
     private List<DiagnosticItem> diagnostics;
 
     protected override async Task OnInitializedAsync()
     {
-        //Load the initial JSON data
-        diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/diagnostics.json");
+        // Start the Flask API
+        StartFlaskApi();
+
+        // Load the initial JSON data
+        diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/initial-diagnostics.json");
     }
 
-    private async Task FetchNewData()
+    private async Task FetchPredictedData()
     {
-        // Fetch the updated JSON data from the remote server (simulated with a local file here)
-        diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/updated-diagnostics.json");
+        // Example input data for the AI model
+        var inputData = new { input = new[] { 1, 0, 0 } };
 
-        // Force the UI to refresh with the new data
-        StateHasChanged();
+        // Fetch the predicted JSON data from the AI model API
+        var response = await Http.PostAsJsonAsync("http://localhost:5000/predict", inputData);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var resultJson = await response.Content.ReadFromJsonAsync<List<DiagnosticItem>>();
+            diagnostics = resultJson;
+            StateHasChanged();
+        }
+    }
+
+    private void StartFlaskApi()
+    {
+        var start = new ProcessStartInfo
+        {
+            FileName = "python",
+            Arguments = "app.py",
+            WorkingDirectory = @"C:\path\to\your\flask\app\directory", // Update this to the correct path
+            UseShellExecute = false,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            CreateNoWindow = true
+        };
+
+        var process = new Process
+        {
+            StartInfo = start
+        };
+
+        process.Start();
     }
 }
