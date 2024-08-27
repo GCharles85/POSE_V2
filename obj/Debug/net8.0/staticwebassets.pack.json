@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\data\\diagnostics.json"
     },
     {
+      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\updated-diagnostics.json",
+      "PackagePath": "staticwebassets\\data\\updated-diagnostics.json"
+    },
+    {
       "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\weather.json",
       "PackagePath": "staticwebassets\\data\\weather.json"
     },

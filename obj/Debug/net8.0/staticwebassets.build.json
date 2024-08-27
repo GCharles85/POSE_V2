@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1JzSop6d9OJLpWqNgsiatXcM8ghD3RGwjVykUVeDejU=",
+  "Hash": "4gatSO2yZPcG4aqLT/C8AC/vQZ97ADStDIlGRbelYEM=",
   "Source": "POSE_V2",
   "BasePath": "/",
   "Mode": "Root",
@@ -7881,6 +7881,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\diagnostics.json"
+    },
+    {
+      "Identity": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\updated-diagnostics.json",
+      "SourceId": "POSE_V2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "data/updated-diagnostics.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\updated-diagnostics.json"
     },
     {
       "Identity": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\weather.json",
