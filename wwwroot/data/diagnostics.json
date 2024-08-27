@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Brakes",
+      "cost": "$500",
+      "description": "Heavy wear on rear passenger side brake pad. Driver side rear pad seized up, constant drum contact.",
+      "icon": "fas fa-car"
+    },
+    {
+      "title": "Software and engine",
+      "cost": "$600",
+      "description": "OBD-II code P0300. Multiple cylinder misfires. Possible vacuum leak near intake manifold.",
+      "icon": "fas fa-tools"
+    },
+    {
+      "title": "Transmission",
+      "cost": "$100",
+      "description": "Defective pressure switch on 4th gear.",
+      "icon": "fas fa-cogs"
+    }
+  ]
+  

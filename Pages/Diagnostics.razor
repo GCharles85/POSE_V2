@@ -1,0 +1,40 @@
+@page "/diagnostics"
+
+@using System.Net.Http
+@using System.Net.Http.Json
+@using Diagnoses.Models
+@inject HttpClient Http
+
+
+<h1>Diagnoses</h1>
+
+@if (diagnostics == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <p>@diagnostics.Count items</p>
+
+    @foreach (var diagnostic in diagnostics)
+    {
+        <div class="diagnostic-item">
+            <div class="icon">
+                <i class="@diagnostic.Icon"></i>
+            </div>
+            <div class="diagnostic-content">
+                <h3>@diagnostic.Title <span class="cost">Estimated costs: @diagnostic.Cost</span></h3>
+                <p>@diagnostic.Description</p>
+            </div>
+        </div>
+    }
+}
+
+@code {
+    private List<DiagnosticItem>? diagnostics;
+
+    protected override async Task OnInitializedAsync()
+    {
+        diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/diagnostics.json");
+    }
+}
