@@ -13,7 +13,7 @@ def add_cors_headers(response):
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
     return response
-
+#TODO: replace below with AI logic
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     # Path to the 'wwwroot/data' directory relative to the parent directory of 'py-model'
