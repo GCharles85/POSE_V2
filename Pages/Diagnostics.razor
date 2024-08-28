@@ -38,7 +38,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         // Load the initial JSON data
-        diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/initial-diagnostics.json");
+        diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/diagnostics.json");
     }
 
     private async Task FetchPredictedData()
