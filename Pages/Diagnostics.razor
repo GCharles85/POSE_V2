@@ -37,9 +37,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        // Start the Flask API
-        StartFlaskApi();
-
         // Load the initial JSON data
         diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/initial-diagnostics.json");
     }
@@ -60,24 +57,4 @@ else
         }
     }
 
-    private void StartFlaskApi()
-    {
-        var start = new ProcessStartInfo
-        {
-            FileName = "python",
-            Arguments = "app.py",
-            WorkingDirectory = @"C:\path\to\your\flask\app\directory", // Update this to the correct path
-            UseShellExecute = false,
-            RedirectStandardOutput = true,
-            RedirectStandardError = true,
-            CreateNoWindow = true
-        };
-
-        var process = new Process
-        {
-            StartInfo = start
-        };
-
-        process.Start();
-    }
-}
+} 
