@@ -52,7 +52,7 @@ else
         if (response.IsSuccessStatusCode)
         {
             var resultJson = await response.Content.ReadFromJsonAsync<DiagnosticItem>();
-            diagnostics.add(resultJson);
+            diagnostics.Add(resultJson);
             StateHasChanged();
         }
     }
