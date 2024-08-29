@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
 import os
+import pymodel
 
 app = Flask(__name__)
 
@@ -25,7 +26,8 @@ def predict():
     
     try:
         # Return the contents of the JSON file
-        return send_from_directory(wwwroot_path, json_filename)
+        #return send_from_directory(wwwroot_path, json_filename)
+        return pymodel.predict([1,0,0])
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
