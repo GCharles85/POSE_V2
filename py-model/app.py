@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import os
 import pymodel
@@ -25,9 +25,11 @@ def predict():
     json_filename = 'updated-diagnostics.json'
     
     try:
+
         # Return the contents of the JSON file
         #return send_from_directory(wwwroot_path, json_filename)
-        return pymodel.predict([1,0,0])
+        inputData = request.get_json()
+        return pymodel.predict(inputData)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

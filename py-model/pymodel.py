@@ -23,6 +23,6 @@ def predict(input_data):
     return json.dumps(y[prediction_index])
 
 # Example usage
-dummy_input = [1, 0, 0]  # Replace with actual input
-result_json = predict(dummy_input)
-print(result_json)
+#dummy_input = [1, 0, 0]  # Replace with actual input
+#result_json = predict(dummy_input)
+#rint(result_json)

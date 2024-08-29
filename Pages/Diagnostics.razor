@@ -51,8 +51,8 @@ else
 
         if (response.IsSuccessStatusCode)
         {
-            var resultJson = await response.Content.ReadFromJsonAsync<List<DiagnosticItem>>();
-            diagnostics = resultJson;
+            var resultJson = await response.Content.ReadFromJsonAsync<DiagnosticItem>();
+            diagnostics.add(resultJson);
             StateHasChanged();
         }
     }

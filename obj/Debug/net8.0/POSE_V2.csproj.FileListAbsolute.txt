@@ -1029,3 +1029,4 @@ C:\Users\Gchar\Documents\POSE_V2\obj\Debug\net8.0\POSE_V2.dll
 C:\Users\Gchar\Documents\POSE_V2\obj\Debug\net8.0\refint\POSE_V2.dll
 C:\Users\Gchar\Documents\POSE_V2\obj\Debug\net8.0\POSE_V2.pdb
 C:\Users\Gchar\Documents\POSE_V2\obj\Debug\net8.0\ref\POSE_V2.dll
+C:\Users\Gchar\Documents\POSE_V2\obj\Debug\net8.0\POSE_V2.sourcelink.json
