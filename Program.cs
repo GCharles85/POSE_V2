@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.EntityFrameworkCore;
 
+using Diagnoses.Context;
 using POSE_V2;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
