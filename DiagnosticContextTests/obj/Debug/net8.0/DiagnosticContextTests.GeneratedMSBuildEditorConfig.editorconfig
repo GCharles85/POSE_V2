@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DiagnosticContextTests
-build_property.ProjectDir = C:\Users\Gchar\Documents\POSE_V2\DiagnosticContextTests\
+build_property.ProjectDir = c:\Users\Gchar\Documents\POSE_V2\DiagnosticContextTests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

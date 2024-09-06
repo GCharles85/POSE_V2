@@ -1,51 +1,51 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\obj\\Debug\\net8.0\\compressed\\7nvpg5omlj.gz",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\obj\\Debug\\net8.0\\compressed\\7nvpg5omlj.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\POSE_V2.styles.css",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\POSE_V2.styles.css",
       "PackagePath": "staticwebassets\\POSE_V2.styles.css"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\css\\app.css",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\diagnostics.json",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\diagnostics.json",
       "PackagePath": "staticwebassets\\data\\diagnostics.json"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\updated-diagnostics.json",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\updated-diagnostics.json",
       "PackagePath": "staticwebassets\\data\\updated-diagnostics.json"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\weather.json",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\data\\weather.json",
       "PackagePath": "staticwebassets\\data\\weather.json"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\favicon.png",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\icon-192.png",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\index.html",
+      "Id": "c:\\Users\\Gchar\\Documents\\POSE_V2\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
