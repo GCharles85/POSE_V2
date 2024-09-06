@@ -1,14 +1,14 @@
-using Microsoft.EntityFrameworkCore;
-using Diagnoses.Models;
+// using Microsoft.EntityFrameworkCore;
+// using Diagnoses.Models;
 
-namespace Diagnoses.Context;
+// namespace Diagnoses.Context;
 
-public class DiagnosticContext : DbContext
-{
-    public DiagnosticContext(DbContextOptions<DiagnosticContext> options)
-        : base(options)
-    {
-    }
+// public class DiagnosticContext : DbContext
+// {
+//     public DiagnosticContext(DbContextOptions<DiagnosticContext> options)
+//         : base(options)
+//     {
+//     }
 
-    public DbSet<DiagnosticItem> Diagnostics { get; set; }
-}
+//     public DbSet<DiagnosticItem> Diagnostics { get; set; }
+// }
