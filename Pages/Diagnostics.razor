@@ -5,6 +5,9 @@
 @using System.Diagnostics
 @using Diagnoses.Models
 @inject HttpClient Http
+@using Diagnoses.Context
+@using Microsoft.EntityFrameworkCore
+@inject DiagnosticContext DbContext
 
 <h1>Diagnoses</h1>
 
@@ -37,8 +40,8 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        // Load the initial JSON data
-        diagnostics = await Http.GetFromJsonAsync<List<DiagnosticItem>>("data/diagnostics.json");
+        // Load diagnostics from the database
+        diagnostics = await DbContext.Diagnostics.ToListAsync();
     }
 
     private async Task FetchPredictedData()
@@ -52,9 +55,13 @@ else
         if (response.IsSuccessStatusCode)
         {
             var resultJson = await response.Content.ReadFromJsonAsync<DiagnosticItem>();
+            
+            // Add the new diagnostic to the list and save it to the database
             diagnostics.Add(resultJson);
+            DbContext.Diagnostics.Add(resultJson);
+            await DbContext.SaveChangesAsync();
+
             StateHasChanged();
         }
     }
-
-} 
+}
