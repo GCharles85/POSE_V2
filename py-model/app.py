@@ -46,22 +46,33 @@ def add_diagnostic_to_db(title, description, cost, icon=None):
     except Exception as e:
         return {"error": str(e)}
 
-#TODO: replace below with AI logic
-@app.route('/predict', methods=['GET'])
+# AI Prediction Route
+@app.route('/predict', methods=['POST'])
 def predict():
-    # Path to the 'wwwroot/data' directory relative to the parent directory of 'py-model'
-    parent_dir = os.path.dirname(os.path.dirname(__file__))
-    wwwroot_path = os.path.join(parent_dir, 'wwwroot/data')
-    
-    # Specify the JSON file you want to return
-    json_filename = 'updated-diagnostics.json'
-    
     try:
-
-        # Return the contents of the JSON file
-        #return send_from_directory(wwwroot_path, json_filename)
+        # Get input data from the request body
         inputData = request.get_json()
-        return pymodel.predict(inputData)
+
+        # Use AI model's predict function to generate predictions
+        ai_prediction = pymodel.predict(inputData)
+
+        # Extract details from the AI prediction
+        title = ai_prediction.get('title', 'AI Generated Diagnostic')
+        description = ai_prediction.get('description', 'AI predicted description')
+        cost = ai_prediction.get('cost', 0.0)
+        icon = ai_prediction.get('icon', None)
+
+        # Add the new diagnostic to the database
+        new_diagnostic = add_diagnostic_to_db(title, description, cost, icon)
+
+        # Return the desired fields in a KVP structure
+        return jsonify({
+            'id': new_diagnostic.id,
+            'title': new_diagnostic.title,
+            'description': new_diagnostic.description,
+            'cost': new_diagnostic.cost,
+            'icon': new_diagnostic.icon
+        })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
