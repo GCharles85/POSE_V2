@@ -76,6 +76,23 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/diagnostics', methods=['GET'])
+def get_diagnostics():
+    diagnostics = Diagnostic.query.all()
+    diagnostics_list = [
+        {
+            'id': diagnostic.id,
+            'title': diagnostic.title,
+            'description': diagnostic.description,
+            'cost': diagnostic.cost,
+            'icon': diagnostic.icon
+        } for diagnostic in diagnostics
+    ]
+    return jsonify(diagnostics_list)
+
 if __name__ == '__main__':
-     # Create the database tables if they do not exist
+    # Create the database tables if they do not exist
+    db.create_all()
+
+    # Run the Flask app
     app.run(host='0.0.0.0', port=5000)
