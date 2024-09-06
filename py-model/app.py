@@ -12,6 +12,16 @@ CORS(app)  # Optionally configure CORS for all routes
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///diagnostics.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+#Initialize SQLAlchemy with the Flask app
+db = SQLALCHEMY(app)
+
+#Define the Diagnostic class
+class Diagnostic(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.String(500), nullable=False)
+    cost = db.Column(db.Float, nullable=False)
+    icon = db.Column(db.String(100), nullable=True)
 
 # After request handler to manually add CORS headers if needed
 @app.after_request
@@ -21,7 +31,7 @@ def add_cors_headers(response):
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
     return response
 #TODO: replace below with AI logic
-@app.route('/predict', methods=['GET', 'POST'])
+@app.route('/predict', methods=['GET'])
 def predict():
     # Path to the 'wwwroot/data' directory relative to the parent directory of 'py-model'
     parent_dir = os.path.dirname(os.path.dirname(__file__))
@@ -40,4 +50,5 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
+     # Create the database tables if they do not exist
     app.run(host='0.0.0.0', port=5000)

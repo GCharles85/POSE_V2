@@ -2,3 +2,15 @@ bin/
 obj/
 *.user
 *.suo
+# Ignore SQLite database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Ignore migration files or database backups
+*.bak
+*.sql
+
+# Ignore logs and environment files
+*.log
+.env
