@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiagnosticContextTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+752c61cfb0acb63f042de43045631502b46d2109")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+002f2552fbd3d3df4e98dc16752c2aa97ea9205d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiagnosticContextTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiagnosticContextTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,11 +1,17 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask_sqlalchemy import SQLALCHEMY
 import os
 import pymodel
 
 app = Flask(__name__)
 
 CORS(app)  # Optionally configure CORS for all routes
+
+#Configure SQLAlchemy to use a SQLite or another db
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///diagnostics.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 
 # After request handler to manually add CORS headers if needed
 @app.after_request
