@@ -30,6 +30,22 @@ def add_cors_headers(response):
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
     return response
+
+# Helper function to add a new diagnostic to the database
+def add_diagnostic_to_db(title, description, cost, icon=None):
+    try:
+        new_diagnostic = Diagnostic(
+            title=title,
+            description=description,
+            cost=cost,
+            icon=icon
+        )
+        db.session.add(new_diagnostic)
+        db.session.commit()
+        return new_diagnostic
+    except Exception as e:
+        return {"error": str(e)}
+
 #TODO: replace below with AI logic
 @app.route('/predict', methods=['GET'])
 def predict():
